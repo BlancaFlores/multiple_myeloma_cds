@@ -1,0 +1,130 @@
+archetype (adl_version=1.4; uid=1a60db20-57d7-32d4-b5b4-e0ca7fde2bf5)
+	openEHR-EHR-EVALUATION.frailty_profile_age_score.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2019-06-28">
+		["name"] = <"Blanca Flores">
+		["organisation"] = <"Heidelberg University">
+		["email"] = <"blanca.flores@med.uni-heidelberg.de">
+	>
+	lifecycle_state = <"0">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To record the age score assigned for newly diagnosed Multiple Myeloma patients, which is used to calculate the frailty profile. (en)">
+			copyright = <"*(en)">
+			use = <"*Use to record the age score for newly diagnosed Multiple Myeloma patients.(en)">
+			misuse = <"*(en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the age score assigned for newly diagnosed Multiple Myeloma patients, which is used to calculate the frailty profile. ">
+			use = <"Use to record the age score for newly diagnosed Multiple Myeloma patients.">
+		>
+	>
+	other_details = <
+		["references"] = <"A. Palumbo et al., “Geriatric assessment predicts survival and toxicities in elderly myeloma patients: An International Myeloma Working Group report,” Blood, vol. 13, pp. 2068–2074, 2015.">
+		["MD5-CAM-1.0.1"] = <"BF2D02C7E3F328E4265B4B123A6477A8">
+		["build_uid"] = <"e94ed753-5d3b-3ac9-aafb-9ec2b835a132">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Frailty profile age score
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Age score
+						value matches {
+							0|[local::at0003],
+							1|[local::at0004],
+							2|[local::at0005],
+							3|[local::at0006]
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Frailty profile age score">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Age score">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"age 75 or under">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"age 76 - 80">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"age above 80">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"unknown age score">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Frailty profile age score(en)">
+					description = <"*unknown(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Alterspunktzahl">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"75 oder weniger">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"76 - 80">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Über 80">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"*unknown age score (en)">
+					description = <"">
+				>
+			>
+		>
+	>
