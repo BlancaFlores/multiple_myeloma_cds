@@ -1,0 +1,1244 @@
+archetype (adl_version=1.4; uid=46d34098-7ff3-36b6-b2af-99ea39971aae)
+	openEHR-EHR-EVALUATION.problem_diagnosis.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck, Sebastian Garde">
+				["organisation"] = <"University of Heidelberg, Central Queensland University">
+			>
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Alan March">
+				["organisation"] = <"Hospital Universitario Austral, Buenos Aires, Argentina">
+				["email"] = <"alandmarch@gmail.com">
+			>
+			accreditation = <"-">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			author = <
+				["name"] = <"Silje Ljosland Bakke, John Tore Valand">
+				["organisation"] = <"Helse Bergen HF">
+			>
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Adriana Kitajima, Gabriela Alves, Maria Angela Scatena, Marivan Abrah�o">
+				["organisation"] = <"Core Consulting">
+				["email"] = <"contato@coreconsulting.com.br">
+			>
+			accreditation = <"Hospital Alem�o Oswaldo Cruz (HAOC)">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+				["name"] = <"Pablo Pazos">
+				["organisation"] = <"CaboLabs">
+			>
+			accreditation = <"Computer Engineer">
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2006-04-23">
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+	>
+	lifecycle_state = <"published">
+	other_contributors = <"Tomas Alme, DIPS, Norway","Nadim Anani, Karolinska Institutet, Sweden","Koray Atalag, University of Auckland, New Zealand","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)","John Bennett, NEHTA, Australia","Steve Bentley, Allscripts, United Kingdom","Lars Bitsch-Larsen, Haukeland University hospital, Norway","Ian Bull, ACT Health, Australia","Sergio Carmona, Chile","Rong Chen, Cambio Healthcare Systems, Sweden","Stephen Chu, Queensland Health, Australia","Ed Conley, Cardiff University, United Kingdom","Matthew Cordell, NEHTA, Australia","Paul Donaldson, Nursing Informatics Australia, Australia","Gail Easterbrook, Flinders Medical Centre, Australia","Aitor Eguzkitza, UPNA (Public University of Navarre) - CHN (Complejo Hospitalario de Navarra), Spain","David Evans, Queensland Health, Australia","Shahla Foozonkhah, Iran ministry of health and education, Iran","Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway","Peter Garcia-Webb, Australia","Sebastian Garde, Ocean Informatics, Germany","Andrew Goodchild, NEHTA, Australia","Anneke Goossen, Results 4 Care, Netherlands","Heather Grain, Llewelyn Grain Informatics, Australia","Trina Gregory, cpc, Australia","Sam Heard, Ocean Informatics, Australia","Evelyn Hovenga, EJSH Consulting, Australia","Eugene Igras, IRIS Systems, Inc., Canada","Lars Karlsen, DIPS ASA, Norway","Lars Morgan Karlsen, DIPS ASA, Norway","Mary Kelaher, NEHTA, Australia","Eizen Kimura, Ehime Univ., Japan","Shinji Kobayashi, Kyoto University, Japan","Robert L'egan, NEHTA, Australia","Sabine Leh, Haukeland University Hospital, Department of Pathology, Norway","Heather Leslie, Ocean Health Systems, Australia (openEHR Editor)","Hugh Leslie, Ocean Informatics, Australia (Editor)","Hallvard L�rum, Oslo University Hospital, Norway","Rohan Martin, Ambulance Victoria, Australia","David McKillop, NEHTA, Australia","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Chris Mitchell, RACGP, Australia","Stewart Morrison, NEHTA, Australia","Bjoern Naess, DIPS ASA, Norway","J�rg Niggemann, compugroup, Germany","Andrej Orel, Marand d.o.o., Slovenia","Chris Pearce, Melbourne East GP Network, Australia","Camilla Preeston, Royal Australian College of General Practitioners, Australia","Margaret Prichard, NEHTA, Australia","Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia","Cathy Richardson, NEHTA, Australia","Robyn Richards, NEHTA - Clinical Terminology, Australia","Jussara Rotzsch, UNB, Brazil","Thilo Schuler, Australia","Anoop Shah, University College London, United Kingdom","Norwegian Review Summary, Nasjonal IKT HF, Norway","Gordon Tomes, Australian Institute of Health and Welfare, Australia","Richard Townley-O'Neill, NEHTA, Australia","Donna Truran, ACCTI-UoW, Australia","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Kylie Young, The Royal Australian College of General Practitioners, Australia">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Dokumentation eines Problems, eines Zustandes oder eines Sachverhalts mit anhaltender Bedeutung f�r die Gesundheit der Person">
+			keywords = <"Sachverhalt","Zustand">
+			copyright = <"� openEHR Foundation">
+			use = <"Zur Dokumentation eines ehemaligen oder aktuellen Problems - also zur Dokumentation ehemaliger Entwicklungen, sowie derzeitiger Probleme.  Mit wechselndem 'Subjekt der Daten' zur Dokumentation von Problemen Verwandter, und somit f�r die Familienanamnese.">
+			misuse = <"Spezialisierungen 'openEHR-EHR-EVALUATION.problem-diagnosis' f�r medizinische Diagnosen und 'openEHR-EHR-EVALUATION.problem-diagnosis-histological' f�r histologische Diagnosen benutzen.">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Para el registro de detalles acerca de un �nico problema de salud o diagn�stico.
+El alcance previsto del problema de salud se mantiene deliberadamente poco definido en el contexto de la documentaci�n cl�nica, de modo tal que pueda representarse cualquier problema, real o percibido, que pueda afectar al bienestar de un individuo en cualquier grado. Un problema de salud puede ser identificado por un individuo, un cuidador, o un profesional de la salud. Para la definici�n de un diagn�stico se require adem�s de criterios cl�nicos objetivos, habitualmente determinados por un profesional de la salud.">
+			keywords = <"asunto","condici�n","problema","diagn�stico","preocupaci�n","lesi�n","impresi�n cl�nica">
+			copyright = <"� openEHR Foundation">
+			use = <"Util�cese para registrar detalles acerca de un �nico problema de salud o diagn�stico.
+
+Una definici�n clara que permita diferenciar un \"problema\" de un \"diagn�stico\" es casi imposible en la pr�ctica - no podemos determinar en forma confiable cuando un problema deber�a ser considerado un diagn�stico. Cuando se cumplen con �xito determinados criterios diagn�sticos o de clasificaci�n es posible denominar una condici�n como un diagn�stico formal, pero previo al cumplimiento de dichos criterios y en tanto exista evidencia cl�nica que lo sustente, tambi�n puede ser v�lido el uso del t�rmino \"diagn�stico\". La cantidad de evidencia de apoyo var�a de caso en caso. Muchos comit�s de est�ndares han lidiado con este problema por a�os sin lograr una resoluci�n clara.
+
+A los fines de la documentaci�n cl�nica mediante este arquetipo, problema y diagn�stico son considerados como un continuo, donde el incremento de los niveles de detalle y sustento en la evidencia inclinan la balanza hacia la etiqueta de \"diagn�stico\". Los requerimientos de datos que sustentan la documentaci�n de ambos son id�nticos, siendo necesarias estructuras de datos adicionales para sustentar la inclusi�n de la evidencia cuando esta exista y se encuentre disponible. Los ejemplos de problemas incluyen: la expresi�n del deseo de bajar de peso por parte de un individuo sin la existencia de un diagn�stico formal de obesidad, o un problema de relaci�n con un familiar. Los ejemplos de diagn�sticos formales incluyen un c�ncer fundamentado en informaci�n hist�rica, los hallazgos de un examen, los hallazgos histopatol�gicos, los hallazgos radiol�gicos, y que cumplen todos los criterios diagn�sticos. En la pr�ctica, la mayor�a de los problemas o diagn�sticos no se encuentran en los extremos del espectro problema-diagn�stico sino que se ubican en alguna posici�n intermedia.
+
+Este arquetipo puede ser utilizado en diversos contextos. Por ejemplo, para registrar un problema o diagn�stico cl�nico durante una consulta cl�nica, para la elaboraci�n de una Lista de Problemas persistente, o para proveer una afirmaci�n sumaria dentro de un documento de Resumen de Alta.
+
+En la pr�ctica, los cl�nicos utilizan muchos calificadores dependientes del contexto, tales como pasado/actual, primario/secundario, activo/inactivo, admisi�n/egreso, etc. Estos contextos pueden ser relativos a la localizaci�n, la especializaci�n, el episodio, o a un instancia de un proceso, pudiendo entonces generar confusi�n o riesgos potenciales de seguridad para el paciente si son incluidos en Listas de Problemas o documentos compartidos que carecen del contexto original. Estos contextos pueden ser arquetipados en forma separada e incluidos en el slot de \"Estado\", dado que su uso var�a en diferentes escenarios. Su uso mayormente pretendido debe darse en el contexto apropiado y no deber�a ser compartido fuera de dicho contexto sin una clara comprensi�n de sus consecuencias potenciales. Por ejemplo: un diagn�stico primario podr�a ser un diagn�stico secundario para otro especialista; un problema activo puede tornarse inactivo (o viceversa) e impactar en la seguridad de una decisi�n cl�nica. En general, estos calificadores deber�an aplicarse localmente dentro del contexto del sistema cl�nico y en la pr�ctica estos estados deber�an ser manualmente mantenidos por cl�nicos a fin de asegurar que las listas de problemas, actuales o pasados, activos o inactivos o primarios y secundarios, sean cl�nicamente exactos.
+
+Este arquetipo ser� utilizado como un componente del Registro M�dico Orientado al Problema descripto por Larry Weed. Se requerir� del desarrollo de arquetipos adicionales para la representaci�n de conceptos cl�nicos tales como una condici�n para un organizador general de diagn�sticos, etc.
+
+En algunas situaciones puede asumirse que la identificaci�n de un diagn�stico solo se ajusta a la experticia del m�dico, pero no es el prop�sito de este arquetipo. Los diagn�sticos pueden ser registrados mediante este arquetipo por parte de cualquier profesional.
+">
+			misuse = <"No debe ser utilizado para registrar s�ntomas tal cual fueron descriptos por el individuo; para ello se debe utilizar el arquetipo CLUSTER.symptom, habitualmente dentro del contexto del arquetipo OBSERVATION.story.
+
+No debe ser utilizado para registrar hallazgo de ex�menes, para ello se debe utilizar la familia de arquetipos relacionados a ex�menes, habitualmente contenidos dentro del arquetipo OBSERVATION.exam.
+
+No debe ser utilizado para registrar hallazgos de pruebas de laboratorio o diagn�sticos relacionados (como por ejemplo diagn�sticos patol�gicos); para ello se debe utilizar un arquetipo apropiado de la familia de arquetipos del tipo OBSERVATION.
+
+No debe ser utilizado para registrar resultados de ex�menes por im�genes o diagn�sticos imagenol�gicos; para ello se debe utilizar un arquetipo apropiado de la familia de arquetipos del tipo OBSERVATION.
+
+No debe ser utilizado para registrar diagn�sticos diferenciales; para ello se debe utilizar el arquetipo EVALUATION.differential_diagnosis.
+
+No debe ser utilizado para registrar \"Motivos de Consulta\"; para ello se debe utilizar el arquetipo EVALUATION.reason_for_encounter.
+
+No debe ser utilizado para registrar procedimientos; para ello se debe utilizar el arquetipo ACTION.procedure.
+
+No debe ser utilizado para registrar detalles acerca del embarazo; para ello se debe utilizar los arquetipos EVALUATION.pregnancy_bf_status, EVALUATION.pregnancy y los arquetipos relacionados.
+
+No debe ser utilizado para registrar aseveraciones acerca de riesgos para la salud o problemas potenciales; para ello se debe utilizar el arquetipo EVALUATION.health_risk.
+
+No debe ser utilizado para registrar aseveraciones acerca de reacciones adversas, alergias o intolerancias; para ello se debe utilizar el arquetipo EVALUATION.adverse_reaction.
+
+
+No debe ser utilizado para registrar la ausencia expl�cita (o presencia negativa) de un problema o diagn�stico (como por ejemplo \"sin diagn�sticos o problemas conocidos\" o \"sin diabetes conocida\"); para expresar una aseveraci�n positiva acerca de la exclusi�n de un problema o diagn�stico se debe utilizar el arquetipo EVALUATION.exclusion-problem_diagnosis.">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For � registrere detaljer om ett enkelt identifisert helseproblem eller diagnose.
+
+Omfanget for et helseproblem er med vilje l�st definert, for � kunne registrere en reell eller selvoppfattet bekymring som i st�rre eller mindre grad kan p�virke et individs velv�re negativt. Et helseproblem kan identifiseres av individet selv, en omsorgsperson eller av helsepersonell. En diagnose er derimot definert basert p� objektive kliniske kriterier, og stilles som regel bare av helsepersonell.">
+			keywords = <"emne","problem","tilstand","hindring","diagnose","helseproblem","bekymring","funn","helsetilstand","konflikt","utfordring","klinisk bilde">
+			copyright = <"� openEHR Foundation">
+			use = <"Brukes til � registrere detaljer om ett enkelt identifisert helseproblem eller diagnose.
+
+� klart definere skillet mellom et \"problem\" og en \"diagnose\" er i praksis nesten umulig, og vi kan ikke p� en p�litelig m�te si n�r et problem skal ses p� som en diagnose. N�r diagnostiske kriterier er innfridd kan vi trygt kalle tilstanden en formell diagnose, men f�r disse kriteriene er m�tt kan det dersom det finnes st�ttende funn ogs� v�re riktig � kalle den en diagnose. Mengden st�ttende funn som kreves for � sette merkelappen \"diagnose\" er ikke lett � definere, og varierer sannsynligvis i praksis fra tilstand til tilstand. Mange standardiseringskomiteer har kjempet med dette definisjonsproblemet i �revis uten � komme til noen klar konklusjon.
+
+N�r det gjelder klinisk dokumentasjon med denne arketypen m� problemer og diagnoser ses p� som deler av et spektrum der �kende detaljgrad og mengde st�ttende funn som regel gir vekt mot merkelappen \"diagnose\". I denne arketypen er det ikke n�dvendig � klassifisere tilstanden som enten et problem eller en diagnose. Datastrukturen for � dokumentere dem er identisk, med tilleggsstrukturer som st�tter inklusjon av nye funn n�r eller hvis de blir tilgjengelige. Eksempler p� problemer kan v�re et individs uttrykte �nske om � g� ned i vekt uten en formell diagnose av fedme, eller problemer i forholdet til et familiemedlem. Eksempler p� formelle diagnoser kan v�re en kreftsvulst der diagnosen er st�ttet av historisk informasjon, unders�kelsesfunn, histologiske funn, radiologiske funn, og som m�ter alle diagnosekriterier. I praksis er de fleste problemer eller diagnoser ikke i hver sin ende av problem/diagnose-spektrumet, men et sted mellom.
+
+Denne arketypen kan brukes i mange sammenhenger. Eksempler kan v�re � registrere et problem eller en klinisk diagnose under en klinisk konsultasjon, fylle en persistent problemliste, eller for � gi oppsummerende informasjon i en epikrise.
+
+I praksis bruker klinikere mange kvalifikatorer som n�v�rende/tidligere, hoved/bidiagnose, aktiv/inaktiv, innleggelse/utskriving, etc. Sammenhengene kan v�re steds-, spesialiserings-, episode- eller arbeidsflytspesifikke, og disse kan for�rsake forvirring eller til og med mulige sikkerhetsrisikoer dersom de videref�res i problemlister eller deles i dokumenter utenfor sin opprinnelige sammenheng. Disse kvalifikatorene kan arketypes separat og inkluderes i \"Status\"-SLOTet, fordi bruken varierer i ulike settinger. Disse vil sannsynligvis hovedsakelig brukes i passende sammenhenger, og ikke deles utenfor sammenhengen uten en klar forst�else av mulige konsekvenser. For eksempel kan en hoveddiagnose for en kliniker v�re en bidiagnose for en annen spesialist, et aktivt problem kan bli inaktivt (og omvendt), og dette kan ha innvirkning p� sikkerhet og beslutningsst�tte. Generelt burde disse kvalifikatorene brukes lokalt og innenfor kontekst i det kliniske systemet, og i praksis b�r de manuelt administreres av klinikere for � sikre at lister over n�v�rende/tidligere, aktiv/inaktiv eller hoved/bidiagnoser er klinisk presise.
+
+Denne arketypen vil bli brukt som en komponent i den problemorienterte journalen som beskrevet av Larry Weed. Tilleggsarketyper som representerer kliniske konsepter som f.eks. \"tilstand\" som en overbygning for diagnoser etc, vil m�tte utvikles for � st�tte dette.
+
+I noen situasjoner antas det at � stille en diagnose ligger fullstendig innenfor legers domene, men dette er ikke hensikten med denne arketypen. Diagnoser kan registreres av alt helsepersonell ved hjelp av denne arketypen.">
+			misuse = <"Brukes ikke til � registrere symptomer slik de beskrives av individet. Til dette brukes CLUSTER.symptom-arketypen, som regel innenfor OBSERVATION.story-arketypen.
+
+Brukes ikke til � registrere funn ved klinisk unders�kelse. Til dette brukes gruppen av unders�kelsesrelaterte CLUSTER-arketyper, som regel innenfor OBSERVATION.exam-arketypen.
+
+Brukes ikke til � registrere lab- eller patologiske diagnoser. Til dette brukes en passende arketype fra laboratoriefamilien av OBSERVATION-arketyper.
+
+Brukes ikke til � registrere billeddiagnostiske eller radiologiske diagnoser. Til dette brukes en passende arketype fra billeddiagnostikkfamilien av OBSERVATION-arketyper.
+
+Brukes ikke til � registrere differensialdiagnoser. Til dette brukes EVALUATION.differential_diagnosis-arketypen.
+
+Brukes ikke til � registrere kontakt�rsak eller klinisk problemstilling ved kontakt. Til dette brukes EVALUATION.reason_for_encounter-arketypen.
+
+Brukes ikke til � registrere prosedyrer, til dette brukes ACTION.procedure-arketypen.
+
+Brukes ikke til � registrere detaljer om graviditet. Til dette brukes EVALUATION.pregnancy_bf_status og EVALUATION.pregnancy, samt relaterte arketyper.
+
+Brukes ikke til � registrere vurderinger av potensiale og sannsynlighet for fremtidige problemer, diagnoser eller andre u�nskede helseeffekter, til dette brukes EVALUATION.health_risk-arketypen.
+
+Brukes ikke til � registrere utsagn om u�nskede reaksjoner, allergier eller intoleranser - bruk EVALUATION.adverse_reaction-arketypen.
+
+Brukes ikke til � registrere et eksplisitt frav�r (eller negativ tilstedev�relse) av et problem eller en diagnose, f.eks. \"ingen kjente problemer eller diagnoser\" eller \"ingen kjent diabetes\". Bruk EVALUATION.exclusion-problem_diagnosis for � uttrykke frav�r av et problem eller en diagnose.">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Para gravar detalhes sobre um �nico problema de sa�de ou diagn�stico identificado.
+
+O escopo pretendido de um problema de sa�de � deliberadamente mantido livre no contexto da documenta��o cl�nica, de forma a captar quaisquer preocupa��es reais ou percebidas que podem afetar adversamente, em qualquer grau, o bem-estar de um indiv�duo. Um problema de sa�de pode ser identificado pela o indiv�duo, um prestador de cuidados ou de um profissional de sa�de. No entanto, o diagn�stico � adicionalmente definido com base em crit�rios cl�nicos objetivos, e, geralmente, determinado apenas por um profissional de sa�de.">
+			keywords = <"caso","condi��o","problema","diagn�stico","preocupa��o","preju�zo","impress�o cl�nica">
+			copyright = <"� openEHR Foundation">
+			use = <"Para gravar detalhes sobre um �nico problema de sa�de ou diagn�stico identificado.
+
+Defini��es claras que permitem a diferencia��o entre um \"problema\" e um \"diagn�stico\" s�o quase imposs�veis na pr�tica - n�o podemos dizer de forma segura quando um problema deve ser considerado como um diagn�stico. Quando o diagn�stico ou os crit�rios de classifica��o s�o cumpridos com sucesso, ent�o com confian�a podemos chamar a condi��o de um diagn�stico formal, mas antes que essas condi��es sejam cumpridas e enquanto houver evid�ncias para tanto, tamb�m pode ser v�lido usar o termo \"diagn�stico\". A quantidade de evid�ncias de apoio requerida para a indica��o de diagn�stico n�o � f�cil de ser definida e na realidade, provavelmente varia de condi��o para condi��o. Muitos comit�s de padr�es t�m, por anos, se confrontado com esse dilema de defini��o sem resolu��o clara. 
+
+Este arqu�tipo pode ser utilizado em muitos contextos. Por exemplo, na grava��o de um problema ou um diagn�stico durante uma consulta cl�nica; preencher uma lista de problema persistente; ou para fornecer uma declara��o de resumo de um documento Sum�rio de Alta.
+
+Na pr�tica, os cl�nicos usam muitos qualificadores de contexto espec�fico, como passado / presente, prim�rio / secund�rio, ativo / inativo, admiss�o / alta, etc. Os contextos podem ser: localiza��o, especializa��o, epis�dio ou espec�ficos de fluxo de trabalho, e estes podem causar confus�o ou at� mesmo potenciais problemas de seguran�a se persistido nas listas de problemas ou compartilhados em documentos que est�o fora do contexto original. Estes qualificadores podem ser arquetipados separadamente e inclu�dos no slot 'Estado', porque seu uso varia em diferentes contextos. Espera-se que estes ser�o utilizados em sua maioria dentro do contexto apropriado e n�o compartilhados fora desse contexto, sem compreens�o clara das consequ�ncias potenciais. Por exemplo, um diagn�stico prim�rio para um cl�nico pode ser um secund�rio para outro especialista; um problema ativo pode se tornar inativo (ou vice-versa) e isso pode impactar no uso seguro do apoio � decis�o cl�nica. Em geral, estes qualificadores devem ser aplicados localmente dentro do contexto do sistema cl�nico e na pr�tica, esses estados devem ser criados manualmente pelos cl�nicos para assegurar que as listas de problemas: Presente / Passado, ativo / inativo ou prim�rio / secund�rio s�o clinicamente precisas.
+
+Este arqu�tipo ser� usado como um componente dentro do Registro Cl�nico Orientado � Problemas, tal como descrito por Larry Weed. Arqu�tipos adicionais, que representam conceitos cl�nicos, tais como: condi��o como um organizador abrangente para diagn�sticos etc, ter�o de ser desenvolvidos para apoiar esta abordagem.
+
+Em algumas situa��es, pode ser assumido que a identifica��o de um diagn�stico s� se encaixa dentro da expertise do m�dico, mas esta n�o � a inten��o para este arqu�tipo. Os diagn�sticos podem ser gravados utilizando esse arqu�tipo por qualquer profissional de sa�de.">
+			misuse = <"N�o deve ser usado para registrar os sintomas descritos pelo indiv�duo, para isso, use o arqu�tipo CLUSTER.symptom, geralmente dentro do arqu�tipo OBSERVATION.story.
+
+N�o deve ser usado para registrar achados do exame, use o CLUSTER da fam�lia de arqu�tipos relacionadas ao exame, geralmente aninhados dentro do arqu�tipo OBSERVATION.exam.
+
+N�o deve ser usado para registrar os resultados dos testes de laborat�rio ou diagn�sticos relacionados, por exemplo, em diagn�sticos patol�gicos use um arqu�tipo apropriado da fam�lia de laborat�rio dos arqu�tipos OBSERVATION.
+
+N�o deve ser usado para registrar os resultados dos exames de imagem ou de diagn�stico por imagem, use um arqu�tipo apropriado a partir da fam�lia de imagem dos arqu�tipos OBSERVATION.
+
+N�o deve ser usado para gravar 'diagn�sticos diferenciais', use o arqu�tipo EVALUATION.differential_diagnosis.
+
+N�o deve ser usado para gravar 'Motivo do Encontro \"ou\" queixa apresentada', use o arqu�tipo EVALUATION.reason_for_encounter.
+
+N�o deve ser usado para gravar procedimentos, use o arqu�tipo ACTION.procedure.
+
+N�o deve ser usado para registrar detalhes sobre a gravidez, use o EVALUATION.pregnancy_bf_status e EVALUATION.pregnancy e os arqu�tipos relacionados.
+
+N�o deve ser usado para gravar o estadiamento sobre o risco ou os problemas de sa�de potenciais, use o arqu�tipo risco EVALUATION.health.
+
+N�o deve ser usado para gravar declara��es sobre rea��es adversas, alergias ou intoler�ncias, use o arqu�tipo EVALUATION.adverse_reaction.
+
+N�o deve ser usado para a grava��o de uma aus�ncia expl�cita (ou presen�a negativa) de um problema ou diagn�stico, por exemplo: \"sem problema ou diagn�sticos conhecido\" ou \"diabetes n�o conhecido\". Use o arqu�tipo EVALUATION.exclusion-problem_diagnosis para expressar uma declara��o positiva sobre a exclus�o de um problema ou diagn�stico.">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"?????? ?????? ??? ???? ?? ???? ???? ??? ??????? ???????, ??????? ?/?? ?????????? ???? ??">
+			keywords = <"??????","????? ?????","???????","??????">
+			copyright = <"� openEHR Foundation">
+			use = <"?????? ?????? ????????? ?????? ??? ???????? ???????? ??????.
+????? ??????? ??? ??????? ??????,? ???? ???????? ?? ????? ???????? ??????? ? ???????.
+? ???? ????? ??????? ?????? ?????? ???? ?? ?? ???? ?????? ??????? ??????.
+??? ??????? ????? ?? ???:
+- ??? ??????? ???? ?? ???? ??? ???????? ? ????? ???? ??????? ??????
+- ?????? ???? ????? ??? ????? ???? ???????
+- ?????? ???????? ?? ??????? ?????? ?????
+- ????? ?? ??????? ?? ??? ????? ???????">
+			misuse = <"?? ?????? ?????? ????????? ???????. ?????? ???? ?? ??? ??????? ?????? ?? ??? ???????, ?????.??????? - ???????">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording details about a single, identified health problem or diagnosis. 
+
+The intended scope of a health problem is deliberately kept loose in the context of clinical documentation, so as to capture any real or perceived concerns that may adversely affect an individual's wellbeing to any degree. A health problem may be identified by the individual, a carer or a healthcare professional. However, a diagnosis is additionally defined based on objective clinical criteria, and usually determined only by a healthcare professional.">
+			keywords = <"issue","condition","problem","diagnosis","concern","injury","clinical impression">
+			copyright = <"� openEHR Foundation">
+			use = <"Use for recording details about a single, identified health problem or diagnosis. 
+
+Clear definitions that enable differentiation between a 'problem' and a 'diagnosis' are almost impossible in practice - we cannot reliably tell when a problem should be regarded as a diagnosis. When diagnostic or classification criteria are successfully met, then we can confidently call the condition a formal diagnosis, but prior to these conditions being met and while there is supportive evidence available, it can also be valid to use the term 'diagnosis'. The amount of supportive evidence required for the label of diagnosis is not easy to define and in reality probably varies from condition to condition. Many standards committees have grappled with this definitional conundrum for years without clear resolution.
+
+For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'. In this archetype it is not neccessary to classify the condition as a 'problem' or 'diagnosis'. The data requirements to support documentation of either are identical, with additional data structure required to support inclusion of the evidence if and when it becomes available. Examples of problems include: the individual's expressed desire to lose weight, but without a formal diagnosis of Obesity; or a relationship problem with a family member. Examples of formal diagnoses would include a cancer that is supported by historical information, examination findings, histopathological findings, radiological findings and meets all requirements for known diagnostic criteria. In practice, most problems or diagnoses do not sit at either end of the problem-diagnosis spectrum, but somewhere in between.
+
+This archetype can be used within many contexts. For example, recording a problem or a clinical diagnosis during a clinical consultation; populating a persistent Problem List; or to provide a summary statement within a Discharge Summary document.
+
+In practice, clinicians use many context-specific qualifiers such as past/present, primary/secondary, active/inactive, admission/discharge etc. The contexts can be location-, specialisation-, episode- or workflow-specific, and these can cause confusion or even potential safety issues if perpetuated in Problem Lists or shared in documents that are outside of the original context. These qualifiers can be archetyped separately and included in the �Status� slot, because their use varies in different settings. It is expected that these will be used mostly within the appropriate context and not shared out of that context without clear understanding of potential consequences. For example, a primary diagnosis to one clinician may be a secondary one to another specialist; an active problem can become inactive (or vice versa) and this can impact the safe use of clinical decision support. In general these qualifiers should be applied locally within the context of the clinical system, and in practice these statuses should be manually curated by clinicians to ensure that lists of Current/Past, Active/Inactive or Primary/Secondary Problems are clinically accurate. 
+
+This archetype will be used as a component within the Problem Oriented Medical Record as described by Larry Weed. Additional archetypes, representing clinical concepts such as condition as an overarching organiser for diagnoses etc, will need to be developed to support this approach.
+
+In some situations, it may be assumed that identification of a diagnosis fits only within the expertise of physicians, but this is not the intent for this archetype. Diagnoses can be recorded using this archetype by any healthcare professional.">
+			misuse = <"Not to be used to record symptoms as described by the individual - use the CLUSTER.symptom archetype, usually within the OBSERVATION.story archetype.
+
+Not to be used to record examination findings - use the family of examination-related CLUSTER archetypes, usually nested within the OBSERVATION.exam archetype.
+
+Not to be used to record laboratory test results or related diagnoses, for example pathological diagnoses - use an appropriate archetype from the laboratory family of OBSERVATION archetypes.
+
+Not to be used to record imaging examination results or imaging diagnoses - use an appropriate archetype from the imaging family of OBSERVATION archetypes.
+
+Not to be used to record 'Differential Diagnoses' - use the EVALUATION.differential_diagnosis archetype.
+
+Not to be used to record 'Reason for Encounter' or 'Presenting Complaint' - use the EVALUATION.reason_for_encounter archetype.
+
+Not to be used to record procedures - use the ACTION.procedure archetype.
+
+Not to be used to record details about pregnancy - use the EVALUATION.pregnancy_bf_status and EVALUATION.pregnancy and related archetypes.
+
+Not to be used to record statements about health risk or potential problems - use the EVALUATION.health_risk archetype.
+
+Not to be used to record statements about adverse reactions, allergies or intolerances - use the EVALUATION.adverse_reaction archetype.
+
+Not to be used for the explicit recording of an absence (or negative presence) of a problem or diagnosis, for example �No known problem or diagnoses� or �No known diabetes�. Use the EVALUATION.exclusion-problem_diagnosis archetype to express a positive statement about exclusion of a problem or diagnosis.">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Este arquetipo se utilizar� para registrar un �nico problema de salud o diagn�stico identificado para el paciente.
+
+El alcance del arquetipo se dej� deliberadamente abierto, para poder capturar cualquier inquietud real o percibida que afecte en cualquier grado la salud de un paciente. Independientemente de qui�n detecte el problema, el diagn�stico debe ser definido basado en criterios cl�nicos objetivos, determinados por un profesional cl�nico.">
+			keywords = <"problema","diagn�stico","preocupaci�n","condici�n","enfermedad">
+			copyright = <"� openEHR Foundation">
+			use = <"Este arquetipo se utilizar� para registrar un �nico problema de salud o diagn�stico identificado para el paciente.">
+			misuse = <"No se debe utilizar para registrar s�ntomas descritos por el paciente, para eso utilizar el arquetipo CLUSTER.symtom.
+
+No se debe utilizar para registrar hallazgos, para eso utilizar arquetipos relacionados con la examinaci�n, usualmente relacionados con el arquetipo OBSERVATION.exam
+
+No se debe utilizar para registrar diagn�sticos realizados sobre resultados de estudios diagn�sticos como laboratorio o imagenolog�a.
+
+No se debe utilizar para registrar el motivo de consulta o problema presentado por el paciente, para eso utilizar el arquetipo EVALUATION.reason_for_encounter
+
+No se debe utilizar para registrar riesgos o problemas potenciales, para eso utilizar el arquetipo EVALUATION.health_risk
+
+No se debe utilizar para registrar la ausencia de un problema, para eso utilizar el arquetipo EVALUATION.exclusion-problem_diagnosis">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Problem/Diagnosis, Draft Archetype [Internet]. National eHealth Transition Authority, NEHTA Clinical Knowledge Manager [cited: 2015-03-12]. Available from: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.896.
+
+ISO/DIS 13940 Health informatics -- System of concepts to support continuity of care., International Organization for Standardization [Internet]. Available at: http://www.iso.org/iso/catalogue_detail.htm?csnumber=58102  (accessed 2015 -04-09).
+
+Common Terminology Criteria for Adverse Events (CTCAE) [Internet]. National Cancer Institute, USA. Available from: http://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm (accessed 2015-07-13).
+
+Weed LL. Medical records that guide and teach. N Engl J Med. 1968 Mar 14;278(11):593-600. PubMed PMID: 5637758. Available from: http://www.nejm.org/doi/full/10.1056/NEJM196803142781105 (accessed 2015-07-13).">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"767E39313E0D137FA9E95FE7477DEEF8">
+		["build_uid"] = <"187538ad-0c99-45a4-ae07-211048c11e6d">
+		["revision"] = <"1.0.5">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Problem/Diagnosis
+		data matches {
+			ITEM_TREE[at0001] matches {    -- structure
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Problem/Diagnosis name
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Clinical description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..*} matches {    -- Body site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0039] occurrences matches {0..*} matches {    -- Structured body site
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.anatomical_location_clock(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					ELEMENT[at0077] occurrences matches {0..1} matches {    -- Date/time of onset
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Date/time clinically recognised
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Severity
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0047,    -- Mild
+									at0048,    -- Moderate
+									at0049]    -- Severe
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0043] occurrences matches {0..*} matches {    -- Specific details
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0072] occurrences matches {0..1} matches {    -- Course description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0030] occurrences matches {0..1} matches {    -- Date/time of resolution
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0046] occurrences matches {0..*} matches {    -- Status
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.problem_status(-[a-zA-Z0-9_]+)*\.v0/}
+					}
+					ELEMENT[at0073] occurrences matches {0..1} matches {    -- Diagnostic certainty
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0074,    -- Suspected
+									at0075,    -- Probable
+									at0076]    -- Confirmed
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0069] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0032] matches {    -- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0070] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0071] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Problem/Diagnosis(en)">
+					description = <"*Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.(en)">
+					comment = <"*Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'.(en)">
+				>
+				["at0001"] = <
+					text = <"structure">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Problem/Diagnosis name(en)">
+					description = <"*Identification of the problem or diagnosis, by name.(en)">
+					comment = <"*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"Momento de reconocimiento del problema">
+					description = <"Fecha y hora, estimado o real, cu�ndo el problema/diagn�stico es detectado por un profesional de la salud">
+				>
+				["at0005"] = <
+					text = <"Severidad">
+					description = <"Valoraci�n de la severidad del problema/diagn�stico">
+				>
+				["at0009"] = <
+					text = <"Descripci�n cl�nica">
+					description = <"Descripci�n narrativa del problema/diagn�stico">
+				>
+				["at0012"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of a simple body site for the location of the problem or diagnosis.(en)">
+					comment = <"*Coding of the name of the anatomical location with a terminology is preferred, where possible.
+Use this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. 
+
+(en)">
+				>
+				["at0030"] = <
+					text = <"Momento de resoluci�n">
+					description = <"D�a y hora, estimado o real, en que el problema/diagn�stico fue resuelto o entr� en remisi�n">
+				>
+				["at0032"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0039"] = <
+					text = <"*Structured body site(en)">
+					description = <"*A structured anatomical location for the problem or diagnosis.(en)">
+					comment = <"*Use this SLOT to insert the CLUSTER.anatomical_location or CLUSTER.relative_location archetypes if the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations.
+
+If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, use of this SLOT becomes redundant.
+
+(en)">
+				>
+				["at0043"] = <
+					text = <"Detalles espec�ficos">
+					description = <"Detalles adicionales para el problema/diagn�stico">
+				>
+				["at0046"] = <
+					text = <"*Status(en)">
+					description = <"*Structured details for location-, domain-, episode- or workflow-specific aspects of the diagnostic process.(en)">
+					comment = <"*Use status or context qualifiers with care, as they are variably used in practice and interoperability cannot be assured unless usage is clearly defined with the community of use. For example: active status - active, inactive, resolved, in remission; evolution status - initial, interim/working, final; temporal status - current, past; episodicity status - first, new, ongoing; admission status - admission, discharge; or priority status - primary, secondary.(en)">
+				>
+				["at0047"] = <
+					text = <"Leve">
+					description = <"El problema tiene severidad leve">
+				>
+				["at0048"] = <
+					text = <"Moderada">
+					description = <"El problema tiene severidad moderada">
+				>
+				["at0049"] = <
+					text = <"Severo">
+					description = <"El problema tiene severidad severo">
+				>
+				["at0069"] = <
+					text = <"Comentario">
+					description = <"Comentario narrativo adicional sobre el problema/diagn�stico no capturado en otros campos">
+				>
+				["at0070"] = <
+					text = <"�ltima actualizaci�n">
+					description = <"Fecha en la que el problema/diagn�stico fue actualizado">
+				>
+				["at0071"] = <
+					text = <"Extensi�n">
+					description = <"Informaci�n adicional requerida para capturar el contenido local o alinear con otros modelos o formalismos para el problema/diagn�stico">
+				>
+				["at0072"] = <
+					text = <"Progreso">
+					description = <"Descripci�n narrativa del progreso del problema/diagn�stico desde su comienzo">
+				>
+				["at0073"] = <
+					text = <"*Diagnostic certainty(en)">
+					description = <"*The level of confidence in the identification of the diagnosis.(en)">
+				>
+				["at0074"] = <
+					text = <"*Suspected(en)">
+					description = <"*The diagnosis has been identified with a low level of certainty.(en)">
+				>
+				["at0075"] = <
+					text = <"*Probable(en)">
+					description = <"*The diagnosis has been identified with a high level of certainty.(en)">
+				>
+				["at0076"] = <
+					text = <"*Confirmed(en)">
+					description = <"*The diagnosis has been confirmed against recognised criteria.(en)">
+				>
+				["at0077"] = <
+					text = <"*Date of onset(en)">
+					description = <"*Estimated or actual date/time that signs or symptoms of the problem/diagnosis were first observed.
+(en)">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0000"] = <
+					text = <"Problema/Diagn�stico">
+					description = <"Detalles acerca de una condici�n de salud, lesi�n, incapacidad o cualquier otra cuersti�n, univocamente identificadas, que impacta sobre el bienestar f�sico, mental y/o social de un individuo">
+					comment = <"La delineaci�n entre el alcance de un problema versus el diagn�stico puede no ser f�cil de lograr en la pr�ctica. A los fines de la documentaci�n cl�nica mediante este arquetipo, problema y diagn�stico son considerados un continuo, donde niveles incrementales de detalles y evidencia de apoyo otorgan mas peso a la etiqueta de \"diagn�stico\".">
+				>
+				["at0001"] = <
+					text = <"*structure(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Nombre del problema/diagn�stico">
+					description = <"Identificaci�n del problema o diagn�stico, por nombre.">
+					comment = <"Se prefiere la codificaci�n del nombre del problema o diagn�stico mediante una terminolog�a cuando esto sea posible.">
+				>
+				["at0003"] = <
+					text = <"Fecha y hora del reconocimiento cl�nico">
+					description = <"Fecha y hora estimadas o confirmadas en las cuales el diagn�stico o problema fue reconocido por el profesional de la salud.">
+					comment = <"El uso de fechas parciales es aceptable. Si el sujeto de cuidados tiene menos de un a�o de edad, se requiere la fecha completa o al menos el a�o y mes para permitir c�lculos adecuados (si por ejemplo se utiliza para guiar un apoyo a la toma de decisiones). Los datos registrados o importados como \"Edad a la aparici�n\" deber�n ser convertidos a una fecha utilizando la fecha de nacimiento del sujeto.">
+				>
+				["at0005"] = <
+					text = <"Severidad">
+					description = <"Una evaluaci�n de la severidad general del problema o diagn�stico.">
+					comment = <"Si la severidad del problema o diagn�stico esta incluida en su nombre mediante c�digos precoordinados, este dato se torna redundante. Nota: una gradaci�n ,as espec�fica de severidad puede ser registrada utilizando el slot de Detalles espec�ficos.">
+				>
+				["at0009"] = <
+					text = <"Descripci�n cl�nica">
+					description = <"Descripci�n narrativa del problema o diagn�stico.">
+					comment = <"Utilizar para proveer trasfondo y contexto, incluyendo evoluci�n, episodios o exacerbaciones, progreso y cualquier otro detalles relevante acerca del problema o diagn�stico.">
+				>
+				["at0012"] = <
+					text = <"Sitio corporal">
+					description = <"Identificaci�n de un sitio corporal simple para la localizaci�n o el problema.">
+					comment = <"Se prefiere la codificaci�n de la localizaci�n anat�mica mediante una terminolog�a cuando esto sea posible.
+Util�cese este dato para registrar localizaciones anat�micas precoordinadas. Si los requerimientos para el registro de una localizaci�n anat�mica son determinadas en tiempo de ejecuci�n por parte de la aplicaci�n, o se requiere un modelado m�s complejo tal como una localizaci�n relativa, util�cese CLUSTER.anatomical_location or CLUSTER.relative_location dentro del slot \"localizaci�n anat�mica estructurada\" en este arquetipo. Las ocurrencias de este dato son ilimitadas para as� permitir escenarios cl�nicos tales como la descripci�n de un rash en m�ltiples localizaciones pero donde todos los dem�s atributos son id�nticos. Si la localizaci�n anat�mica esta incluida en el nombre del problema o diagn�stico mediante c�digos precoordinados, este dato se torna redundante.">
+				>
+				["at0030"] = <
+					text = <"Fecha/hora de resoluci�n">
+					description = <"Fecha y hora estimadas o confirmadas en las cuales este problema o diagn�stico remiti� o se resolvi�, determinadas de un profesional de la salud.">
+					comment = <"El uso de fechas parciales es aceptable. Si el sujeto de cuidados tiene menos de un a�o de edad, se requiere la fecha completa o al menos el a�o y mes para permitir c�lculos adecuados (si por ejemplo se utiliza para guiar un apoyo a la toma de decisiones).">
+				>
+				["at0032"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0039"] = <
+					text = <"Sitio corporal estructurado">
+					description = <"una localizaci�n anat�mica estructurada para el problema o diagn�stico.">
+					comment = <"Util�cese este slot para insertar los arqeutipos de CLUSTER.anatomical_location o CLUSTER.relative_location si los requerimientos de registro de la localizaci�n anat�mica son determinados en tiempo de ejecuci�n por la aplicaci�n o se requiere un modelado m�s complejo tal como localizaciones relativas.
+Si la localizaci�n anat�mica est� incluida en el nombre del problema o diagn�stico mediante c�digos precoordinados, este dato se torna redundante.">
+				>
+				["at0043"] = <
+					text = <"Detalles espec�ficos">
+					description = <"Detalles adicionales requeridos para registrar como atributos un�vocos del este problema o diagn�stico.">
+					comment = <"Puede incluir detalles estructurados acerca del grado o estadificaci�n del diagn�stico, criterios diagn�sticos, criterios de clasificaci�n o una evaluaci�n formal de severidad tal como los Criterios Terminol�gicos Comunes para Eventos Adversos.">
+				>
+				["at0046"] = <
+					text = <"Estado">
+					description = <"Detalles estructurados para los aspectos espec�ficos de localizaci�n, dominio, episodio o decurso del proceso diagn�stico.">
+					comment = <"Los calificadores de estado o contexto con cuidado ya que son variables en su utilizaci�n y la interoperabilidad no puede ser garantizada excepto en casos en que se encuentren claramente definidos en el seno de la comunidad de uso. Por ejemplo, el estado de actividad (activo, inactivo, resuelto o en remisi�n), el estado de evoluci�n (inicial, interino o de trabajo, final), el estado temporal (actual, pasado), el estado epis�dico (primero, inicial, en curso), el estado de admisi�n (admisi�n, egreso) o el estado de prioridad (primario, secundario).">
+				>
+				["at0047"] = <
+					text = <"Leve">
+					description = <"El problema o diagn�stico no interfiere con la actividad normal o puede causar da�os a la salud si no es tratado.">
+				>
+				["at0048"] = <
+					text = <"Moderado">
+					description = <"El problema o diagn�stico interfiere con la actividad normal o puede da�ar la salud si no es tratado.">
+				>
+				["at0049"] = <
+					text = <"Severo">
+					description = <"El problema o diagn�stico impide la actividad normal o pude da�ar seriamente la salud si no es tratado.">
+				>
+				["at0069"] = <
+					text = <"Comentario">
+					description = <"Narrativa adicional acerca del problema o diagn�stico que no ha sido consignada en otros campos.">
+				>
+				["at0070"] = <
+					text = <"�ltima actualizaci�n.">
+					description = <"La fecha de la �ltima actualizaci�n de este problema o diagn�stico.">
+				>
+				["at0071"] = <
+					text = <"Extensi�n">
+					description = <"Informaci�n adicional requerida para consignar contenidos locales o alinear con otros modelos de referencia o formalismos.">
+					comment = <"Por ejemplo: requerimientos de informaci�n local o metadatos adicionales para alineamiento con equivalentes en FHIR o CIMI.">
+				>
+				["at0072"] = <
+					text = <"Descripci�n del curso">
+					description = <"Descripci�n narrativa del curso del problema o diagn�stico desde su aparici�n.">
+				>
+				["at0073"] = <
+					text = <"Certeza diagn�stica">
+					description = <"El nivel de certeza de la identificaci�n del diagn�stico.">
+				>
+				["at0074"] = <
+					text = <"Sospechado">
+					description = <"El diagn�stico ha sido identificado con un bajo nivel de certeza.">
+				>
+				["at0075"] = <
+					text = <"Probable">
+					description = <"El diagn�stico ha sido identificado con un alto nivel de certeza.">
+				>
+				["at0076"] = <
+					text = <"Confirmado">
+					description = <"El diagn�stico ha sido confirmado en base a criterios reconocidos.">
+				>
+				["at0077"] = <
+					text = <"Fecha/hora de aparici�n">
+					description = <"Fecha y hora estimadas o confirmadas en las cuales los signos o s�ntomas del problema fueron observados por primera vez.">
+					comment = <"Los datos registrados o importados como \"Edad a la aparici�n\" deber�n ser convertidos a una fecha utilizando la fecha de nacimiento del sujeto.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Problem/Diagnosis(en)">
+					description = <"*Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.(en)">
+					comment = <"*Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'.(en)">
+				>
+				["at0001"] = <
+					text = <"Structure">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Problem/Diagnosis name(en)">
+					description = <"*Identification of the problem or diagnosis, by name.(en)">
+					comment = <"*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"*Date/time clinically recognised(en)">
+					description = <"*Estimated or actual date/time the diagnosis or problem was recognised by a healthcare professional.(en)">
+					comment = <"*Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support.(en)">
+				>
+				["at0005"] = <
+					text = <"*Severity(en)">
+					description = <"*An assessment of the overall severity of the problem or diagnosis.(en)">
+					comment = <"*If severity is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. Note: more specific grading of severity can be recorded using the Specific details SLOT.(en)">
+				>
+				["at0009"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Narrative description about the problem or diagnosis.(en)">
+					comment = <"*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)">
+				>
+				["at0012"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of a simple body site for the location of the problem or diagnosis.(en)">
+					comment = <"*Coding of the name of the anatomical location with a terminology is preferred, where possible.
+Use this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. 
+
+(en)">
+				>
+				["at0030"] = <
+					text = <"*Date/time of resolution(en)">
+					description = <"*Estimated or actual date/time of resolution or remission for this problem or diagnosis, as determined by a healthcare professional.(en)">
+					comment = <"*Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support.(en)">
+				>
+				["at0032"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0039"] = <
+					text = <"*Structured body site(en)">
+					description = <"*A structured anatomical location for the problem or diagnosis.(en)">
+					comment = <"*Use this SLOT to insert the CLUSTER.anatomical_location or CLUSTER.relative_location archetypes if the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations.
+
+If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, use of this SLOT becomes redundant.
+
+(en)">
+				>
+				["at0043"] = <
+					text = <"*Specific details(en)">
+					description = <"*Details that are additionally required to record as unique attributes of this problem or diagnosis.(en)">
+					comment = <"*May include structured detail about the grading or staging of the diagnosis; diagnostic criteria, classification criteria or formal severity assessments such as Common Terminology Criteria for Adverse Events.(en)">
+				>
+				["at0046"] = <
+					text = <"*Status(en)">
+					description = <"*Structured details for location-, domain-, episode- or workflow-specific aspects of the diagnostic process.(en)">
+					comment = <"*Use status or context qualifiers with care, as they are variably used in practice and interoperability cannot be assured unless usage is clearly defined with the community of use. For example: active status - active, inactive, resolved, in remission; evolution status - initial, interim/working, final; temporal status - current, past; episodicity status - first, new, ongoing; admission status - admission, discharge; or priority status - primary, secondary.(en)">
+				>
+				["at0047"] = <
+					text = <"*Mild(en)">
+					description = <"*The problem or diagnosis does not interfere with normal activity.(en)">
+				>
+				["at0048"] = <
+					text = <"*Moderate(en)">
+					description = <"*The problem or diagnosis causes interference with normal activity.(en)">
+				>
+				["at0049"] = <
+					text = <"*Severe(en)">
+					description = <"*The problem or diagnosis prevents normal activity.(en)">
+				>
+				["at0069"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the problem or diagnosis not captured in other fields.(en)">
+				>
+				["at0070"] = <
+					text = <"*Last updated(en)">
+					description = <"*The date this problem or diagnosis was last updated.(en)">
+				>
+				["at0071"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0072"] = <
+					text = <"*Course description(en)">
+					description = <"*Narrative description about the course of the problem or diagnosis since onset.(en)">
+				>
+				["at0073"] = <
+					text = <"*Diagnostic certainty(en)">
+					description = <"*The level of confidence in the identification of the diagnosis.(en)">
+				>
+				["at0074"] = <
+					text = <"*Suspected(en)">
+					description = <"*The diagnosis has been identified with a low level of certainty.(en)">
+				>
+				["at0075"] = <
+					text = <"*Probable(en)">
+					description = <"*The diagnosis has been identified with a high level of certainty.(en)">
+				>
+				["at0076"] = <
+					text = <"*Confirmed(en)">
+					description = <"*The diagnosis has been confirmed against recognised criteria.(en)">
+				>
+				["at0077"] = <
+					text = <"*Date of onset(en)">
+					description = <"*Estimated or actual date/time that signs or symptoms of the problem/diagnosis were first observed.
+(en)">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Problem/Diagnosis">
+					description = <"Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.">
+					comment = <"Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'.">
+				>
+				["at0001"] = <
+					text = <"structure">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Problem/Diagnosis name">
+					description = <"Identification of the problem or diagnosis, by name.">
+					comment = <"Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.">
+				>
+				["at0003"] = <
+					text = <"Date/time clinically recognised">
+					description = <"Estimated or actual date/time the diagnosis or problem was recognised by a healthcare professional.">
+					comment = <"Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of clinical recognition\" should be converted to a date using the subject's date of birth.">
+				>
+				["at0005"] = <
+					text = <"Severity">
+					description = <"An assessment of the overall severity of the problem or diagnosis.">
+					comment = <"If severity is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. Note: more specific grading of severity can be recorded using the Specific details SLOT.">
+				>
+				["at0009"] = <
+					text = <"Clinical description">
+					description = <"Narrative description about the problem or diagnosis.">
+					comment = <"Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.">
+				>
+				["at0012"] = <
+					text = <"Body site">
+					description = <"Identification of a simple body site for the location of the problem or diagnosis.">
+					comment = <"Coding of the name of the anatomical location with a terminology is preferred, where possible.
+Use this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. 
+
+">
+				>
+				["at0030"] = <
+					text = <"Date/time of resolution">
+					description = <"Estimated or actual date/time of resolution or remission for this problem or diagnosis, as determined by a healthcare professional.">
+					comment = <"Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of resolution\" should be converted to a date using the subject's date of birth.
+">
+				>
+				["at0032"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0039"] = <
+					text = <"Structured body site">
+					description = <"A structured anatomical location for the problem or diagnosis.">
+					comment = <"Use this SLOT to insert the CLUSTER.anatomical_location or CLUSTER.relative_location archetypes if the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations.
+
+If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, use of this SLOT becomes redundant.
+
+">
+				>
+				["at0043"] = <
+					text = <"Specific details">
+					description = <"Details that are additionally required to record as unique attributes of this problem or diagnosis.">
+					comment = <"May include structured detail about the grading or staging of the diagnosis; diagnostic criteria, classification criteria or formal severity assessments such as Common Terminology Criteria for Adverse Events.">
+				>
+				["at0046"] = <
+					text = <"Status">
+					description = <"Structured details for location-, domain-, episode- or workflow-specific aspects of the diagnostic process.">
+					comment = <"Use status or context qualifiers with care, as they are variably used in practice and interoperability cannot be assured unless usage is clearly defined with the community of use. For example: active status - active, inactive, resolved, in remission; evolution status - initial, interim/working, final; temporal status - current, past; episodicity status - first, new, ongoing; admission status - admission, discharge; or priority status - primary, secondary.">
+				>
+				["at0047"] = <
+					text = <"Mild">
+					description = <"The problem or diagnosis does not interfere with normal activity or may cause damage to health if left untreated.">
+				>
+				["at0048"] = <
+					text = <"Moderate">
+					description = <"The problem or diagnosis causes interference with normal activity or will damage health if left untreated.">
+				>
+				["at0049"] = <
+					text = <"Severe">
+					description = <"The problem or diagnosis prevents normal activity or will seriously damage health if left untreated.">
+				>
+				["at0069"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
+				>
+				["at0070"] = <
+					text = <"Last updated">
+					description = <"The date this problem or diagnosis was last updated.">
+				>
+				["at0071"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0072"] = <
+					text = <"Course description">
+					description = <"Narrative description about the course of the problem or diagnosis since onset.">
+				>
+				["at0073"] = <
+					text = <"Diagnostic certainty">
+					description = <"The level of confidence in the identification of the diagnosis.">
+				>
+				["at0074"] = <
+					text = <"Suspected">
+					description = <"The diagnosis has been identified with a low level of certainty.">
+				>
+				["at0075"] = <
+					text = <"Probable">
+					description = <"The diagnosis has been identified with a high level of certainty.">
+				>
+				["at0076"] = <
+					text = <"Confirmed">
+					description = <"The diagnosis has been confirmed against recognised criteria.">
+				>
+				["at0077"] = <
+					text = <"Date/time of onset">
+					description = <"Estimated or actual date/time that signs or symptoms of the problem/diagnosis were first observed.">
+					comment = <"Data captured/imported as \"Age at onset\" should be converted to a date using the subject's date of birth.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Problem/Diagnosis(en)">
+					description = <"*Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.(en)">
+					comment = <"*Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'.(en)">
+				>
+				["at0001"] = <
+					text = <"*structure(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Problem/Diagnosis name(en)">
+					description = <"*Identification of the problem or diagnosis, by name.(en)">
+					comment = <"*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)">
+				>
+				["at0003"] = <
+					text = <"*Date/time clinically recognised(en)">
+					description = <"*Estimated or actual date/time the diagnosis or problem was recognised by a healthcare professional.(en)">
+					comment = <"*Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support.(en)">
+				>
+				["at0005"] = <
+					text = <"*Severity(en)">
+					description = <"*An assessment of the overall severity of the problem or diagnosis.(en)">
+					comment = <"*If severity is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. Note: more specific grading of severity can be recorded using the Specific details SLOT.(en)">
+				>
+				["at0009"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Narrative description about the problem or diagnosis.(en)">
+					comment = <"*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)">
+				>
+				["at0012"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of a simple body site for the location of the problem or diagnosis.(en)">
+					comment = <"*Coding of the name of the anatomical location with a terminology is preferred, where possible.
+Use this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. 
+
+(en)">
+				>
+				["at0030"] = <
+					text = <"*Date/time of resolution(en)">
+					description = <"*Estimated or actual date/time of resolution or remission for this problem or diagnosis, as determined by a healthcare professional.(en)">
+					comment = <"*Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support.(en)">
+				>
+				["at0032"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0039"] = <
+					text = <"*Structured body site(en)">
+					description = <"*A structured anatomical location for the problem or diagnosis.(en)">
+					comment = <"*Use this SLOT to insert the CLUSTER.anatomical_location or CLUSTER.relative_location archetypes if the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations.
+
+If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, use of this SLOT becomes redundant.
+
+(en)">
+				>
+				["at0043"] = <
+					text = <"*Specific details(en)">
+					description = <"*Details that are additionally required to record as unique attributes of this problem or diagnosis.(en)">
+					comment = <"*May include structured detail about the grading or staging of the diagnosis; diagnostic criteria, classification criteria or formal severity assessments such as Common Terminology Criteria for Adverse Events.(en)">
+				>
+				["at0046"] = <
+					text = <"*Status(en)">
+					description = <"*Structured details for location-, domain-, episode- or workflow-specific aspects of the diagnostic process.(en)">
+					comment = <"*Use status or context qualifiers with care, as they are variably used in practice and interoperability cannot be assured unless usage is clearly defined with the community of use. For example: active status - active, inactive, resolved, in remission; evolution status - initial, interim/working, final; temporal status - current, past; episodicity status - first, new, ongoing; admission status - admission, discharge; or priority status - primary, secondary.(en)">
+				>
+				["at0047"] = <
+					text = <"*Mild(en)">
+					description = <"*The problem or diagnosis does not interfere with normal activity.(en)">
+				>
+				["at0048"] = <
+					text = <"*Moderate(en)">
+					description = <"*The problem or diagnosis causes interference with normal activity.(en)">
+				>
+				["at0049"] = <
+					text = <"*Severe(en)">
+					description = <"*The problem or diagnosis prevents normal activity.(en)">
+				>
+				["at0069"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the problem or diagnosis not captured in other fields.(en)">
+				>
+				["at0070"] = <
+					text = <"*Last updated(en)">
+					description = <"*The date this problem or diagnosis was last updated.(en)">
+				>
+				["at0071"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0072"] = <
+					text = <"*Course description(en)">
+					description = <"*Narrative description about the course of the problem or diagnosis since onset.(en)">
+				>
+				["at0073"] = <
+					text = <"*Diagnostic certainty(en)">
+					description = <"*The level of confidence in the identification of the diagnosis.(en)">
+				>
+				["at0074"] = <
+					text = <"*Suspected(en)">
+					description = <"*The diagnosis has been identified with a low level of certainty.(en)">
+				>
+				["at0075"] = <
+					text = <"*Probable(en)">
+					description = <"*The diagnosis has been identified with a high level of certainty.(en)">
+				>
+				["at0076"] = <
+					text = <"*Confirmed(en)">
+					description = <"*The diagnosis has been confirmed against recognised criteria.(en)">
+				>
+				["at0077"] = <
+					text = <"*Date of onset(en)">
+					description = <"*Estimated or actual date/time that signs or symptoms of the problem/diagnosis were first observed.
+(en)">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["at0000"] = <
+					text = <"Problema /Diagn�stico">
+					description = <"Detalhes sobre uma �nica condi��o de sa�de identificada, les�es, defici�ncia ou qualquer outra quest�o que tenha impacto sobre o bem-estar f�sico, mental e / ou social de um indiv�duo.">
+					comment = <"Delimita��o clara entre o �mbito de um problema em compara��o a um diagn�stico, n�o � f�cil de se conseguir na pr�tica. Para fins de documenta��o cl�nica com este arqu�tipo, problema e diagn�stico s�o considerados como uma continuidade, com n�veis crescentes de detalhes e evid�ncia de apoio, geralmente fornecendo peso para o r�tulo de \"diagn�stico\".">
+				>
+				["at0001"] = <
+					text = <"structure">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Nome do Problema / Diagn�stico">
+					description = <"Identifica��o do problema ou diagn�stico, por nome.">
+					comment = <"Quando poss�vel, � prefer�vel usar a codifica��o do nome do problema ou diagn�stico com uma terminologia.">
+				>
+				["at0003"] = <
+					text = <"Data / hora da reconhecimento cl�nico">
+					description = <"Data / hora, estimada ou real, que o diagn�stico ou o problema foi reconhecido por um profissional de sa�de.">
+					comment = <"Datas parciais s�o aceit�veis. 
+Se o tema do cuidado est� com idade inferior a um ano, ent�o a data completa ou no m�nimo o m�s e o ano s�o necess�rios para permitir c�lculos de idade precisos, por exemplo, se usado para conduzir apoio � decis�o. Os dados capturados / importados como \"Idade no momento do reconhecimento cl�nico\" deve ser convertida para uma data usando o sujeito data de nascimento.">
+				>
+				["at0005"] = <
+					text = <"Severidade">
+					description = <"Uma avalia��o global da severidade do problema ou diagn�stico.">
+					comment = <"Se a severidade est� inclu�da no nome do Problema / diagn�stico atrav�s de c�digos pr�-coordenados, este elemento de dados torna-se redundante. 
+Nota: a classifica��o mais espec�fica da gravidade pode ser gravada utilizando os detalhes espec�ficos SLOT.">
+				>
+				["at0009"] = <
+					text = <"Descri��o cl�nica">
+					description = <"Descri��o narrativa sobre o problema ou diagn�stico.">
+					comment = <"Usar para fornecer conhecimento e contexto, incluindo evolu��o, epis�dios ou exacerba��es, progresso e quaisquer outros detalhes relevantes, sobre o problema ou diagn�stico.">
+				>
+				["at0012"] = <
+					text = <"Local do corpo">
+					description = <"Simples identifica��o de um local do corpo para a localiza��o do problema ou diagn�stico.">
+					comment = <"A codifica��o do nome da localiza��o anat�mica com uma terminologia � prefer�vel, quando poss�vel.
+Utilize este elemento de dados para gravar localiza��es anat�micas precoordenadas. Se os requisitos para gravar a localiza��o anat�mica s�o determinados em tempo real atrav�s da aplica��o ou requerem uma modelagem mais complexa, como localiza��es relativas, em seguida, use o CLUSTER.anatomical_location ou CLUSTER.relative_location dentro do SLOT 'localiza��o anat�mica estruturada\" neste arqu�tipo.
+Ocorr�ncias para este elemento de dados s�o ilimitadas para permitir cen�rios cl�nicos tais como a descri��o de uma erup��o cut�nea em v�rios locais, mas em que todos os outros atributos s�o id�nticos. Se a localiza��o anat�mica � inclu�da ao nome do Problema / diagn�stico, atrav�s de c�digos pr�-coordenados, este elemento de dados torna-se redundante.">
+				>
+				["at0030"] = <
+					text = <"Data /tempo de resolu��o">
+					description = <"Data / tempo, estimado ou atual, de resolu��o ou de dispensa desse problema ou diagn�stico, como determinado por um profissional de sa�de.">
+					comment = <"Datas parciais s�o aceit�veis. 
+Se o tema do cuidado est� com idade inferior a um ano, ent�o a data completa ou no m�nimo o m�s e o ano s�o necess�rios para permitir c�lculos de idade precisos, por exemplo, se usado para conduzir apoio � decis�o. Os dados capturados / importados como \"Idade na ocasi�o da resolu��o\" deve ser convertida para uma data usando o sujeito data de nascimento.">
+				>
+				["at0032"] = <
+					text = <"Tree(en)">
+					description = <"@ internal @">
+				>
+				["at0039"] = <
+					text = <"Local estruturado do corpo">
+					description = <"A localiza��o anat�mica estruturada para o problema ou diagn�stico.">
+					comment = <"Use esse SLOT para inserir os arqu�tipos CLUSTER.anatomical_location ou CLUSTER.relative_location se os requisitos para gravar a localiza��o anat�mica s�o determinados em tempo real atrav�s da aplica��o ou requer uma modelagem mais complexa, como localiza��es relativas.
+
+Se a localiza��o anat�mica est� inclu�da ao nome Problema / diagn�stico, atrav�s de c�digos pr�-coordenados, o uso deste SLOT torna-se redundante.">
+				>
+				["at0043"] = <
+					text = <"Detalhes espec�ficos">
+					description = <"Detalhes que s�o adicionalmente necess�rios para gravar atributos como �nicos deste problema ou diagn�stico.">
+					comment = <"Pode incluir detalhes estruturados sobre a classifica��o ou a realiza��o do diagn�stico; crit�rios de diagn�stico, crit�rios de classifica��o ou avalia��o formal da severidade, como os crit�rios de terminologia comum para eventos adversos.">
+				>
+				["at0046"] = <
+					text = <"Estado">
+					description = <"Detalhes estruturados para localiza��o, dom�nio, epis�dio ou aspectos espec�ficos do fluxo de trabalho do processo de diagn�stico.">
+					comment = <"Use o estado ou os qualificadores contexto com cuidado, pois eles s�o vari�veis quando usados na pr�tica e a interoperabilidade n�o pode ser assegurada, salvo se o uso est� claramente definido com a comunidade de uso. 
+Por exemplo: evolu��o do estado: inicial, inativo, resolvido, em remiss�o; estado de evolu��o: inicial, provis�rio / trabalhando, final; estado temporal: presente, passado; estado do episodio: primeiro, novo, em curso; estado de admiss�o: admiss�o, alta; ou estado de prioridade: prim�rio, secund�rio.">
+				>
+				["at0047"] = <
+					text = <"Suave">
+					description = <"O problema ou o diagn�stico n�o interfere na atividade normal ou causa danos � sa�de, se n�o for tratado.">
+				>
+				["at0048"] = <
+					text = <"Moderado">
+					description = <"O problema ou o diagn�stico interfere na atividade normal ou prejudicar� a sa�de, se n�o for tratado.">
+				>
+				["at0049"] = <
+					text = <"Severo">
+					description = <"O problema ou diagn�stico impede a atividade normal ou causar� s�rios danos � sa�de se n�o tratado.">
+				>
+				["at0069"] = <
+					text = <"Coment�rio">
+					description = <"Narrativa adicional sobre o problema ou diagn�stico, n�o capturados em outros campos.">
+				>
+				["at0070"] = <
+					text = <"Ultima atualiza��o">
+					description = <"A data este problema ou diagn�stico foi atualizado pela �ltima vez.">
+				>
+				["at0071"] = <
+					text = <"Extens�o">
+					description = <"Informa��es adicionais necess�rias para capturar o conte�do local ou para alinhar com outros modelos de refer�ncia / formalismos.">
+					comment = <"Por exemplo: requisitos de informa��o locais ou metadados adicionais para alinhar com FHIR ou CIMI equivalentes.">
+				>
+				["at0072"] = <
+					text = <"Descri��o do curso">
+					description = <"Descri��o narrativa sobre o curso do problema ou diagn�stico, desde o in�cio.">
+				>
+				["at0073"] = <
+					text = <"Certeza do diagn�stico">
+					description = <"O n�vel de confian�a da identifica��o do diagn�stico.">
+				>
+				["at0074"] = <
+					text = <"Suspeito">
+					description = <"O diagn�stico foi identificado com um n�vel baixo de convic��o.">
+				>
+				["at0075"] = <
+					text = <"Prov�vel">
+					description = <"O diagn�stico foi identificado com um elevado grau de certeza.">
+				>
+				["at0076"] = <
+					text = <"confirmado">
+					description = <"O diagn�stico foi confirmado com base em crit�rios reconhecidos.">
+				>
+				["at0077"] = <
+					text = <"Data / tempo de in�cio">
+					description = <"Data / tempo, estimada ou real, que os sinais ou sintomas do problema / diagn�stico foram observados pela primeira vez.">
+					comment = <"Os dados capturados / importados como \"A idade de in�cio\" devem ser convertidos para uma data, usando o sujeito data de nascimento.">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Problem/Diagnosis(en)">
+					description = <"*Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.(en)">
+					comment = <"*Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'.(en)">
+				>
+				["at0001"] = <
+					text = <"structure">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Problem/Diagnosenavn">
+					description = <"Identifisering av problemet eller diagnosen ved hjelp av navn.
+
+">
+					comment = <"Koding av navnet p� problemet eller diagnosen med en terminologi er foretrukket, der det er mulig.">
+				>
+				["at0003"] = <
+					text = <"Dato/tid for klinisk stadfestelse">
+					description = <"Antatt eller faktisk dato/tid da diagnosen eller problemet ble bekreftet av helsepersonell.">
+					comment = <"Delvise datoer er tillatt. Dersom individet er under ett �r gammel, m� komplett dato eller som et minimum m�ned og �r oppgis for � muliggj�re presise beregninger av alder, f.eks. ved bruk i beslutningsst�ttesystemer.">
+				>
+				["at0005"] = <
+					text = <"Alvorlighetsgrad">
+					description = <"En vurdering av problemet eller diagnosens overordnede alvorlighetsgrad.">
+					comment = <"Dersom alvorlighetsgrad inkluderes i feltet \"Problem/diagnosenavn\" via prekoordinerte koder blir dette dataelementet overfl�dig. Merk: Mer spesifikk gradering av alvorlighetsgrad kan registreres ved � bruke SLOTet \"Spesifikke detaljer\"">
+				>
+				["at0009"] = <
+					text = <"Klinisk beskrivelse">
+					description = <"Fritekstbeskrivelse av problemet eller diagnosen.
+
+
+
+">
+					comment = <"Brukes til � gi bakgrunn og kontekst, inkludert utvikling, episoder eller forverringer, fremgang og alle andre relevante detaljer, om problemet eller diagnosen.">
+				>
+				["at0012"] = <
+					text = <"*Body site(en)">
+					description = <"*Identification of a simple body site for the location of the problem or diagnosis.(en)">
+					comment = <"*Coding of the name of the anatomical location with a terminology is preferred, where possible.
+Use this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. 
+
+(en)">
+				>
+				["at0030"] = <
+					text = <"Dato/tid for bedring">
+					description = <"Estimert eller faktisk dato/tid for bedring eller remisjon av det aktuelle problemet eller diagnosen, fastsl�tt av helsepersonell.
+
+
+
+">
+					comment = <"Delvise datoer er tillatt. Dersom individet er under ett �r gammel, m� komplett dato eller som et minimum m�ned og �r oppgis for � muliggj�re presise beregninger av alder, f.eks. ved bruk i beslutningsst�ttesystemer.">
+				>
+				["at0032"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0039"] = <
+					text = <"*Structured body site(en)">
+					description = <"*A structured anatomical location for the problem or diagnosis.(en)">
+					comment = <"*Use this SLOT to insert the CLUSTER.anatomical_location or CLUSTER.relative_location archetypes if the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations.
+
+If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, use of this SLOT becomes redundant.
+
+(en)">
+				>
+				["at0043"] = <
+					text = <"Spesifikke detaljer">
+					description = <"*Detaljer som er n�dvendige for � registrere det aktuelle problemet eller diagnosens unike egenskaper.
+
+
+
+">
+					comment = <"Kan omfatte strukturerte detaljer om klassifisering eller stadier av diagnosen; diagnosiske kriterier, klassifikasjon eller formelle vurderinger av alvorlighetsgrad, som f.eks. Common Terminology Criteria for Adverse Events.">
+				>
+				["at0046"] = <
+					text = <"*Status(en)">
+					description = <"*Structured details for location-, domain-, episode- or workflow-specific aspects of the diagnostic process.(en)">
+					comment = <"*Use status or context qualifiers with care, as they are variably used in practice and interoperability cannot be assured unless usage is clearly defined with the community of use. For example: active status - active, inactive, resolved, in remission; evolution status - initial, interim/working, final; temporal status - current, past; episodicity status - first, new, ongoing; admission status - admission, discharge; or priority status - primary, secondary.(en)">
+				>
+				["at0047"] = <
+					text = <"Mild">
+					description = <"Problemet eller diagnosen forstyrrer ikke normal aktivitet.">
+				>
+				["at0048"] = <
+					text = <"Moderat">
+					description = <"Problemet eller diagnosen forstyrrer normal aktivitet.">
+				>
+				["at0049"] = <
+					text = <"Alvorlig">
+					description = <"Problemet eller diagnosen forhindrer normal aktivitet.">
+				>
+				["at0069"] = <
+					text = <"Kommentar">
+					description = <"Utdypende fritekst om problemet eller diagnosen, som ikke passer i andre felt.">
+				>
+				["at0070"] = <
+					text = <"Sist oppdatert">
+					description = <"Datoen da problemet eller diagnosen sist ble oppdatert.">
+				>
+				["at0071"] = <
+					text = <"Utvidelse">
+					description = <"Ytterligere informasjon som trengs for � kunne registrere lokalt definert innhold eller for � tilpasse til andre referansemodeller/formalismer.
+
+
+
+">
+					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for � kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
+				>
+				["at0072"] = <
+					text = <"Forl�psbeskrivelse">
+					description = <"Fritekstbeskrivelse av forl�pet av problemet eller diagnosen siden debut.">
+				>
+				["at0073"] = <
+					text = <"Diagnostisk sikkerhet">
+					description = <"Grad av sikkerhet i identifikasjonen av diagnosen.">
+				>
+				["at0074"] = <
+					text = <"Mistenkt">
+					description = <"Diagnoses er identifisert med en lav grad av sikkerhet.">
+				>
+				["at0075"] = <
+					text = <"Sannsynlig">
+					description = <"Diagnosen er identifisert med en stor grad av sikkerhet.">
+				>
+				["at0076"] = <
+					text = <"Bekreftet">
+					description = <"Diagnosen er bekreftet opp mot anerkjente kriterier.">
+				>
+				["at0077"] = <
+					text = <"Dato for debut">
+					description = <"Antatt eller faktisk dato/tid da tegn eller symptomer p� problemet eller diagnosen f�rst ble observert.">
+				>
+			>
+		>
+	>

@@ -1,0 +1,72 @@
+archetype (adl_version=1.4; uid=adc79d70-af96-45e3-ac25-b88c6fcd9250)
+	openEHR-EHR-EVALUATION.ldh_criteria_mm.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2020-05-15">
+		["name"] = <"test">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"f0ca1eaa-bf32-37ab-8e4a-16dc1bd3779c">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- ldh_mm
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Serum LDH levels
+						value matches {
+							1|[local::at0003],
+							2|[local::at0004]
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"ldh_mm">
+					description = <"ldh_mm">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Serum LDH levels">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Serum LDH < the upper limit of normal">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Serum LDH > the upper limit of normal">
+					description = <"*">
+				>
+			>
+		>
+	>

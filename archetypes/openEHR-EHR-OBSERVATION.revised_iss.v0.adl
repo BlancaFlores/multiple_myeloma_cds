@@ -1,0 +1,227 @@
+archetype (adl_version=1.4; uid=cee572c7-43c3-41c4-a80b-fd8d151a2a40)
+	openEHR-EHR-OBSERVATION.revised_iss.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-04-19">
+		["name"] = <"Blanca Flores">
+		["organisation"] = <"Heidelberg University">
+		["email"] = <"flores.blancafm@gmail.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"A three-stage system that can be applied internationally to classify and stratify multiple myeloma patients.">
+			keywords = <"revised iss; multiple myeloma; staging; albumin; B2M", ...>
+			use = <"Use to record results for the International Staging System (ISS), chromosomal abnormalities (CA), and serum lactate dehydrogenase (LDH) to evaluate their prognostic value in newly diagnosed multiple myeloma patients.">
+			misuse = <"Do not use for diseases other than multiple myeloma.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["references"] = <"Palumbo, A. et al. (2015). Revised International Staging System for Multiple Myeloma: A Report From International Myeloma Working Group. Journal of Clinical Oncology, 33(26), 2863–2869. https://doi.org/10.1200/JCO.2015.61.2267">
+		["build_uid"] = <"93173ff3-e0e1-3ba3-a690-71bd8d56fd62">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- revised_iss
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Serum β2 microglobulin
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0019,    -- < 3.5 mg/L
+													at0020,    -- 3.5-5.4 mg/L
+													at0021]    -- > 5.4 mg/L
+												}
+											}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Serum albumin
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0022,    -- < 3.5 g/dL
+													at0023]    -- ≥ 3.5 g/dL
+												}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Serum LDH
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0024,    -- normal
+													at0025]    -- high
+												}
+											}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- CA by iFISH
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0027,    -- standard risk
+													at0028]    -- high risk
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- ISS stage
+										value matches {
+											1|[local::at0011],
+											2|[local::at0012],
+											3|[local::at0013]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- R-ISS stage
+										value matches {
+											1|[local::at0015],
+											2|[local::at0016],
+											3|[local::at0017]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"revised_iss">
+					description = <"Revised International Staging System">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Serum β2 microglobulin">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Serum albumin">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Serum LDH">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"CA by iFISH">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"ISS stage">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"R-ISS stage">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"ISS stage I">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"ISS stage II">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"ISS stage III">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"R-ISS stage I">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"R-ISS stage II">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"R-ISS stage III">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"< 3.5 mg/L">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"3.5-5.4 mg/L">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"> 5.4 mg/L">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"< 3.5 g/dL">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"≥ 3.5 g/dL">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"normal">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"high">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"standard risk">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"high risk">
+					description = <"">
+				>
+			>
+		>
+	>
