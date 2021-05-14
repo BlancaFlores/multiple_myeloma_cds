@@ -1,0 +1,716 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 guidelines:\
+  1: CCI_scale.v0\
+test_cases:\
+- id: No_input\
+  input:\
+    1: \{\}\
+  expected_output:\
+    1:\
+      gt0053|Total score: 0\
+- id: Total_score_1\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 0|local::at0010|Absent|\
+      gt0005|Peripheral disease: 0|local::at0060|Absent|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 0|local::at0014|Absent|\
+      gt0007|Dementia: 0|local::at0017|Absent|\
+      gt0008|Chronic pulmonary disease: 0|local::at0023|Absent|\
+      gt0009|Connective tissue disease: 0|local::at0025|Absent|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 1\
+- id: Total_score_2\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 0|local::at0060|Absent|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 0|local::at0014|Absent|\
+      gt0007|Dementia: 0|local::at0017|Absent|\
+      gt0008|Chronic pulmonary disease: 0|local::at0023|Absent|\
+      gt0009|Connective tissue disease: 0|local::at0025|Absent|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 2\
+- id: Total_score_3\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 0|local::at0014|Absent|\
+      gt0007|Dementia: 0|local::at0017|Absent|\
+      gt0008|Chronic pulmonary disease: 0|local::at0023|Absent|\
+      gt0009|Connective tissue disease: 0|local::at0025|Absent|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 3\
+- id: Total_score_4\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 0|local::at0017|Absent|\
+      gt0008|Chronic pulmonary disease: 0|local::at0023|Absent|\
+      gt0009|Connective tissue disease: 0|local::at0025|Absent|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 4\
+- id: Total_score_5\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 0|local::at0023|Absent|\
+      gt0009|Connective tissue disease: 0|local::at0025|Absent|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 5\
+- id: Total_score_6\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 0|local::at0025|Absent|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 6\
+- id: Total_score_7\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 7\
+- id: Total_score_8\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 8\
+- id: Total_score_9\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 9\
+- id: Total_score_10\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 10\
+- id: Total_score_11\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 11\
+- id: Total_score_12\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 12\
+- id: Total_score_13\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 0|local::at0029|Absent|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 13\
+- id: Total_score_14\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 14\
+- id: Total_score_15\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 0|local::at0027|Absent|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 15\
+- id: Total_score_16\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 16\
+- id: Total_score_17\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 0|local::at0023|Absent|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 17\
+- id: Total_score_18\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 18\
+- id: Total_score_19\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 0|local::at0014|Absent|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 19\
+- id: Total_score_20\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 20\
+- id: Total_score_21\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 0|local::at0023|Absent|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 2|local::at0046|Present|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 21\
+- id: Total_score_22\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 2|local::at0046|Present|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 22\
+- id: Total_score_23\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 0|local::at0032|Absent|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 2|local::at0046|Present|\
+      gt0019|Moderate or severe liver disease: 3|local::at0049|Present|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 23\
+- id: Total_score_24\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 0|local::at0057|Absent|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 2|local::at0046|Present|\
+      gt0019|Moderate or severe liver disease: 3|local::at0049|Present|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 24\
+- id: Total_score_25\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 2|local::at0046|Present|\
+      gt0019|Moderate or severe liver disease: 3|local::at0049|Present|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 25\
+- id: Total_score_31\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 2|local::at0046|Present|\
+      gt0019|Moderate or severe liver disease: 3|local::at0049|Present|\
+      gt0020|Metastatic solid tumor: 6|local::at0052|Present|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 31\
+- id: Total_score_37\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 0|local::at0035|Absent|\
+      gt0015|Diabetes with end-organ damage: 0|local::at0038|Absent|\
+      gt0016|Tumor without metastasis: 0|local::at0041|Absent|\
+      'gt0017|Leukemia ': 0|local::at0062|Absent|\
+      gt0018|Lymphoma: 0|local::at0045|Absent|\
+      gt0019|Moderate or severe liver disease: 0|local::at0048|Absent|\
+      gt0020|Metastatic solid tumor: 0|local::at0051|Absent|\
+      gt0021|AIDS: 0|local::at0055|Absent|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 12\
+  input:\
+    1:\
+      gt0003|Myocardial infarction: 1|local::at0008|Present|\
+      gt0004|Congestive heart failure: 1|local::at0011|Present|\
+      gt0005|Peripheral disease: 1|local::at0061|Present|\
+      'gt0006|Cerebrovascular disease: CVA with mild or no residua or TIA': 1|local::at0015|Present|\
+      gt0007|Dementia: 1|local::at0018|Present|\
+      gt0008|Chronic pulmonary disease: 1|local::at0024|Present|\
+      gt0009|Connective tissue disease: 1|local::at0026|Present|\
+      gt0010|Peptic ulcer disease: 1|local::at0028|Present|\
+      gt0011|Mild liver disease: 1|local::at0059|Present|\
+      'gt0012|Diabetes without end-organ damage ': 1|local::at0058|Present|\
+      gt0013|Hemiplegia: 2|local::at0033|Present|\
+      gt0014|Moderate or severe renal disease: 2|local::at0036|Present|\
+      gt0015|Diabetes with end-organ damage: 2|local::at0039|Present|\
+      gt0016|Tumor without metastasis: 2|local::at0042|Present|\
+      'gt0017|Leukemia ': 2|local::at0063|Present|\
+      gt0018|Lymphoma: 2|local::at0046|Present|\
+      gt0019|Moderate or severe liver disease: 3|local::at0049|Present|\
+      gt0020|Metastatic solid tumor: 6|local::at0052|Present|\
+      gt0021|AIDS: 6|local::at0056|Present|\
+  expected_output:\
+    1:\
+      gt0053|Total score: 37\
+}

@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 guidelines:\
+  1: IADL_scale.v0\
+test_cases:\
+- id: No_input\
+  input:\
+    1: \{\}\
+  expected_output:\
+    1:\
+      gt0006|Total score: 0\
+- id: Total_score_1\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+      gt0014|Shopping: 0|local::at0025|0- Shops independently for small purchases|\
+      gt0015|Food Preparation: 0|local::at0030|0- Prepares adequate meals if supplied with ingredients|\
+      gt0016|Housekeeping: 0|local::at0038|0- Does not participate in any housekeeping tasks|\
+      gt0017|Laundry: 0|local::at0042|0- All laundry must be done by others|\
+      gt0018|Mode of Transportation: 0|local::at0047|0- Travel limited to taxi or automobile with assistance of another|\
+      gt0019|Responsibility for Own Medications: 0|local::at0051|0- Takes responsibility if medication is prepared in advance in separate dosage|\
+      gt0020|Ability to Handle Finances: 0|local::at0056|0- Incapable of handling money|\
+  expected_output:\
+    1:\
+      gt0006|Total score: 1\
+      gt0063|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+- id: Total_score_2\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0021|1- Answers telephone, but does not dial|\
+      gt0014|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0015|Food Preparation: 0|local::at0030|0- Prepares adequate meals if supplied with ingredients|\
+      gt0016|Housekeeping: 0|local::at0038|0- Does not participate in any housekeeping tasks|\
+      gt0017|Laundry: 0|local::at0042|0- All laundry must be done by others|\
+      gt0018|Mode of Transportation: 0|local::at0047|0- Travel limited to taxi or automobile with assistance of another|\
+      gt0019|Responsibility for Own Medications: 0|local::at0051|0- Takes responsibility if medication is prepared in advance in separate dosage|\
+      gt0020|Ability to Handle Finances: 0|local::at0056|0- Incapable of handling money|\
+  expected_output:\
+    1:\
+      gt0064|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0006|Total score: 2\
+      gt0063|Ability to Use Telephone: 1|local::at0021|1- Answers telephone, but does not dial|\
+- id: Total_score_3\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0021|1- Answers telephone, but does not dial|\
+      gt0014|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0015|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0016|Housekeeping: 0|local::at0038|0- Does not participate in any housekeeping tasks|\
+      gt0017|Laundry: 0|local::at0042|0- All laundry must be done by others|\
+      gt0018|Mode of Transportation: 0|local::at0047|0- Travel limited to taxi or automobile with assistance of another|\
+      gt0019|Responsibility for Own Medications: 0|local::at0051|0- Takes responsibility if medication is prepared in advance in separate dosage|\
+      gt0020|Ability to Handle Finances: 0|local::at0056|0- Incapable of handling money|\
+  expected_output:\
+    1:\
+      gt0065|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0064|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0006|Total score: 3\
+      gt0063|Ability to Use Telephone: 1|local::at0021|1- Answers telephone, but does not dial|\
+- id: Total_score_4\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+      gt0014|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0015|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0016|Housekeeping: 1|local::at0037|1- Needs help with all home maintenance tasks|\
+      gt0017|Laundry: 0|local::at0042|0- All laundry must be done by others|\
+      gt0018|Mode of Transportation: 0|local::at0047|0- Travel limited to taxi or automobile with assistance of another|\
+      gt0019|Responsibility for Own Medications: 0|local::at0051|0- Takes responsibility if medication is prepared in advance in separate dosage|\
+      gt0020|Ability to Handle Finances: 0|local::at0056|0- Incapable of handling money|\
+  expected_output:\
+    1:\
+      gt0065|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0064|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0066|Housekeeping: 1|local::at0037|1- Needs help with all home maintenance tasks|\
+      gt0006|Total score: 4\
+      gt0063|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+- id: Total_score_5\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+      gt0014|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0015|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0016|Housekeeping: 1|local::at0036|1- Performs light daily tasks, but cannot maintain acceptable level of cleanliness|\
+      gt0017|Laundry: 1|local::at0041|1- Launders small items-rinses stockings, etc.|\
+      gt0018|Mode of Transportation: 0|local::at0047|0- Travel limited to taxi or automobile with assistance of another|\
+      gt0019|Responsibility for Own Medications: 0|local::at0051|0- Takes responsibility if medication is prepared in advance in separate dosage|\
+      gt0020|Ability to Handle Finances: 0|local::at0056|0- Incapable of handling money|\
+  expected_output:\
+    1:\
+      gt0065|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0064|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0066|Housekeeping: 1|local::at0036|1- Performs light daily tasks, but cannot maintain acceptable level of cleanliness|\
+      gt0067|Laundry: 1|local::at0041|1- Launders small items-rinses stockings, etc.|\
+      gt0006|Total score: 5\
+      gt0063|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+- id: Total_score_6\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+      gt0014|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0015|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0016|Housekeeping: 1|local::at0035|1- Performs light daily tasks such as dishwashing, bed making|\
+      gt0017|Laundry: 1|local::at0040|1- Does personal laundry completely|\
+      gt0018|Mode of Transportation: 1|local::at0046|1- Travels on public transportation when accompanied by another|\
+      gt0019|Responsibility for Own Medications: 0|local::at0051|0- Takes responsibility if medication is prepared in advance in separate dosage|\
+      gt0020|Ability to Handle Finances: 0|local::at0056|0- Incapable of handling money|\
+  expected_output:\
+    1:\
+      gt0065|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0064|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0068|Mode of Transportation: 1|local::at0046|1- Travels on public transportation when accompanied by another|\
+      gt0066|Housekeeping: 1|local::at0035|1- Performs light daily tasks such as dishwashing, bed making|\
+      gt0067|Laundry: 1|local::at0040|1- Does personal laundry completely|\
+      gt0006|Total score: 6\
+      gt0063|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+- id: Total_score_7\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+      gt0014|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0015|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0016|Housekeeping: 1|local::at0037|1- Needs help with all home maintenance tasks|\
+      gt0017|Laundry: 1|local::at0040|1- Does personal laundry completely|\
+      gt0018|Mode of Transportation: 1|local::at0045|1- Arranges own travel via taxi, but does not otherwise use public transportation|\
+      gt0019|Responsibility for Own Medications: 1|local::at0050|1- Is reponsible for taking medication in correct dosages at correct time|\
+      gt0020|Ability to Handle Finances: 0|local::at0056|0- Incapable of handling money|\
+  expected_output:\
+    1:\
+      gt0065|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0064|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0069|Responsibility for Own Medications: 1|local::at0050|1- Is reponsible for taking medication in correct dosages at correct time|\
+      gt0068|Mode of Transportation: 1|local::at0045|1- Arranges own travel via taxi, but does not otherwise use public transportation|\
+      gt0066|Housekeeping: 1|local::at0037|1- Needs help with all home maintenance tasks|\
+      gt0067|Laundry: 1|local::at0040|1- Does personal laundry completely|\
+      gt0006|Total score: 7\
+      gt0063|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+- id: Total_score_8\
+  input:\
+    1:\
+      gt0003|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+      gt0014|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0015|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0016|Housekeeping: 1|local::at0034|1- Maintains house alone with occasional assistance (e.g. heavy work domestic help)|\
+      gt0017|Laundry: 1|local::at0040|1- Does personal laundry completely|\
+      gt0018|Mode of Transportation: 1|local::at0044|1- Travels independently on public transportation or drives own car|\
+      gt0019|Responsibility for Own Medications: 1|local::at0050|1- Is reponsible for taking medication in correct dosages at correct time|\
+      gt0020|Ability to Handle Finances: 1|local::at0054|1- Manages financial matters independently (budgets, writes checks, pays rent, bills, goes to bank), collects and keeps track of income|\
+  expected_output:\
+    1:\
+      gt0065|Food Preparation: 1|local::at0029|1- Plans, prepares, and serves adequate meals independently|\
+      gt0064|Shopping: 1|local::at0024|1- Takes care of all shopping needs independently|\
+      gt0069|Responsibility for Own Medications: 1|local::at0050|1- Is reponsible for taking medication in correct dosages at correct time|\
+      gt0068|Mode of Transportation: 1|local::at0044|1- Travels independently on public transportation or drives own car|\
+      gt0070|Ability to Handle Finances: 1|local::at0054|1- Manages financial matters independently (budgets, writes checks, pays rent, bills, goes to bank), collects and keeps track of income|\
+      gt0066|Housekeeping: 1|local::at0034|1- Maintains house alone with occasional assistance (e.g. heavy work domestic help)|\
+      gt0067|Laundry: 1|local::at0040|1- Does personal laundry completely|\
+      gt0006|Total score: 8\
+      gt0063|Ability to Use Telephone: 1|local::at0016|1- Operates telephone on own initiative; looks up and dials numbers|\
+}
