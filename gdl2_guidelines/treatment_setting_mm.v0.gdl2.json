@@ -1,0 +1,154 @@
+{
+  "id": "treatment_setting_mm.v0",
+  "gdl_version": "2.0",
+  "concept": "gt0001",
+  "language": {
+    "original_language": "ISO_639-1::en"
+  },
+  "description": {
+    "original_author": {
+      "date": "2020-05-15"
+    },
+    "lifecycle_state": "Not set",
+    "details": {
+      "en": {
+        "id": "en"
+      }
+    },
+    "other_details": {}
+  },
+  "definition": {
+    "data_bindings": {
+      "gt0002": {
+        "id": "gt0002",
+        "model_id": "openEHR-EHR-OBSERVATION.basic_demographic.v1",
+        "template_id": "openEHR-EHR-OBSERVATION.basic_demographic.v1",
+        "type": "INPUT",
+        "elements": {
+          "gt0004": {
+            "id": "gt0004",
+            "path": "/data[at0001]/events[at0002]/data[at0003]/items[at0013]"
+          }
+        }
+      },
+      "gt0005": {
+        "id": "gt0005",
+        "model_id": "openEHR-EHR-EVALUATION.frailty_profile_mm.v0",
+        "template_id": "openEHR-EHR-EVALUATION.frailty_profile_mm.v0",
+        "type": "INPUT",
+        "elements": {
+          "gt0006": {
+            "id": "gt0006",
+            "path": "/data[at0001]/items[at0014]"
+          }
+        }
+      },
+      "gt0007": {
+        "id": "gt0007",
+        "model_id": "openEHR-EHR-EVALUATION.treatment_setting_mm.v0",
+        "template_id": "openEHR-EHR-EVALUATION.treatment_setting_mm.v0",
+        "type": "OUTPUT",
+        "elements": {
+          "gt0008": {
+            "id": "gt0008",
+            "path": "/data[at0001]/items[at0006]"
+          }
+        }
+      }
+    },
+    "rules": {
+      "gt0009": {
+        "id": "gt0009",
+        "priority": 4,
+        "when": [
+          "$gt0004|Age|<65,a"
+        ],
+        "then": [
+          "$gt0008|front-line treatment setting|=2|local::at0008|ASCT setting|"
+        ]
+      },
+      "gt0010": {
+        "id": "gt0010",
+        "priority": 3,
+        "when": [
+          "$gt0004|Age|<70,a",
+          "$gt0006|Patient status|==0|local::at0015|Fit|"
+        ],
+        "then": [
+          "$gt0008|front-line treatment setting|=2|local::at0008|ASCT setting|"
+        ]
+      },
+      "gt0012": {
+        "id": "gt0012",
+        "priority": 2,
+        "when": [
+          "$gt0004|Age|<70,a",
+          "$gt0004|Age|>=65,a",
+          "($gt0006|Patient status|==2|local::at0017|Frail|)||($gt0006|Patient status|==1|local::at0016|Intermediate fitness|)"
+        ],
+        "then": [
+          "$gt0008|front-line treatment setting|=1|local::at0007|Non-transplant setting|"
+        ]
+      },
+      "gt0011": {
+        "id": "gt0011",
+        "priority": 1,
+        "when": [
+          "$gt0004|Age|>=70,a"
+        ],
+        "then": [
+          "$gt0008|front-line treatment setting|=1|local::at0007|Non-transplant setting|"
+        ]
+      }
+    }
+  },
+  "ontology": {
+    "term_definitions": {
+      "en": {
+        "id": "en",
+        "terms": {
+          "gt0001": {
+            "id": "gt0001",
+            "text": "treatment setting mm"
+          },
+          "gt0003": {
+            "id": "gt0003",
+            "text": "Birthdate",
+            "description": "*"
+          },
+          "gt0004": {
+            "id": "gt0004",
+            "text": "Age",
+            "description": "Age in years, and for babies: months, weeks or days"
+          },
+          "gt0006": {
+            "id": "gt0006",
+            "text": "Patient status",
+            "description": "*"
+          },
+          "gt0008": {
+            "id": "gt0008",
+            "text": "front-line treatment setting",
+            "description": "*"
+          },
+          "gt0009": {
+            "id": "gt0009",
+            "text": "Set to ASCT (young patients)"
+          },
+          "gt0010": {
+            "id": "gt0010",
+            "text": "Set to ASCT (fit patients)"
+          },
+          "gt0011": {
+            "id": "gt0011",
+            "text": "Set to non-transplant (elderly patients)"
+          },
+          "gt0012": {
+            "id": "gt0012",
+            "text": "Set to non-transplant (frail patients)"
+          }
+        }
+      }
+    }
+  }
+}
